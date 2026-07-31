@@ -1,0 +1,91 @@
+{
+  "name": "@hraness/codex-app-sdk",
+  "version": "0.1.0",
+  "description": "Headless state, command, persistence, and React contracts for Codex app-server interfaces.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "./src/index.ts",
+    "./src/react.ts",
+    "./src/testing/index.ts"
+  ],
+  "packageManager": "bun@1.3.14",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hraness/codex-app-sdk.git"
+  },
+  "homepage": "https://github.com/hraness/codex-app-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/hraness/codex-app-sdk/issues"
+  },
+  "keywords": [
+    "typescript",
+    "codex",
+    "app-server",
+    "reactive-ui",
+    "state-management",
+    "persistence",
+    "react"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./src/react.ts",
+      "import": "./dist/react.js"
+    },
+    "./testing": {
+      "types": "./src/testing/index.ts",
+      "import": "./dist/testing/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "files": [
+    "dist",
+    "src/client-host.ts",
+    "src/client.ts",
+    "src/coordinates.ts",
+    "src/index.ts",
+    "src/lifecycle.ts",
+    "src/operations.ts",
+    "src/persistence.ts",
+    "src/react.ts",
+    "src/store.ts",
+    "src/testing/fixtures.ts",
+    "src/testing/index.ts",
+    "src/testing/memory-persistence.ts",
+    "src/testing/scripted-driver.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun -e 'await (await import(\"node:fs/promises\")).rm(\"./dist\", { recursive: true, force: true })' && bun build ./src/index.ts ./src/react.ts ./src/testing/index.ts --outdir ./dist --root ./src --target browser --format esm --splitting --packages external",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test ./src",
+    "test:package": "bun run ./scripts/package-smoke.ts",
+    "check": "bun run typecheck && bun run build && bun run test:package && bun run test",
+    "prepack": "bun run check"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0 <20.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "typescript": "^6.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
