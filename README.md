@@ -11,7 +11,7 @@ Pin a reviewed repository tag when one is available:
 ```json
 {
   "dependencies": {
-    "@hraness/codex-app-sdk": "github:hraness/codex-app-sdk#v0.1.0"
+    "@hraness/codex-app-sdk": "github:hraness/codex-app-sdk#v0.1.1"
   }
 }
 ```

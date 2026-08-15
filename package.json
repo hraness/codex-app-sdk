@@ -1,6 +1,6 @@
 {
   "name": "@hraness/codex-app-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Headless state, command, persistence, and React contracts for Codex app-server interfaces.",
   "license": "MIT",
   "type": "module",
