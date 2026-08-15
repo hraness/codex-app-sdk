@@ -1,0 +1,24 @@
+{
+  "contract": "hraness.portfolio-inventory/v1",
+  "formatVersion": 1,
+  "repository": "hraness/codex-app-sdk",
+  "components": [
+    {
+      "kind": "package",
+      "name": "@hraness/codex-app-sdk",
+      "path": ".",
+      "visibility": "public",
+      "version": "0.1.1"
+    }
+  ],
+  "dependencies": [],
+  "deployments": [],
+  "brands": [],
+  "publications": [
+    {
+      "component": "@hraness/codex-app-sdk",
+      "packageName": "@hraness/codex-app-sdk",
+      "repository": "hraness/codex-app-sdk"
+    }
+  ]
+}

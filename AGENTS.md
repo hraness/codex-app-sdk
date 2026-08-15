@@ -2,6 +2,7 @@
 
 - `src/` – framework-neutral client contracts, immutable stores, operation semantics, persistence ports, lifecycle helpers, an optional React binding, and deterministic testing adapters.
 - `docs/` – architecture and persistence guidance.
+- `portfolio-inventory.json` and `scripts/check-portfolio-inventory.ts` – canonical public package inventory and its standalone consistency gate.
 - `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `LICENSE` – usage, contribution, vulnerability-reporting, and licensing terms.
 - `package.json`, `tsconfig.json`, and `bun.lock` – the standalone package and verification configuration.
 
@@ -15,4 +16,5 @@
 - Keep persistence adapters narrow. SQLite and Convex implementations should satisfy the same ports without exposing a generic snapshot database.
 - Pair readable behavior tests with property tests for ordering, transitions, conditional writes, monotonic generations, and selector identity.
 - Treat this repository as the complete project. Use only its public names, files, paths, commands, and examples.
+- Keep `portfolio-inventory.json` byte-canonical and consistent with the public package identity, version, repository, and direct `@hraness/*` dependency edges.
 - Run `bun run check` before handing off a change.
