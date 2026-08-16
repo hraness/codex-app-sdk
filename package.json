@@ -62,6 +62,10 @@
     "LICENSE"
   ],
   "scripts": {
+    "kb:refresh": "bunx --bun github:hraness/kb#v0.15.1 refresh --root kb",
+    "kb:check:lane": "bunx --bun github:hraness/kb#v0.15.1 check --root kb --no-catalog",
+    "kb:check": "bunx --bun github:hraness/kb#v0.15.1 check --root kb && bunx --bun github:hraness/kb#v0.15.1 agents check --root kb --repo .",
+    "kb:catalog": "bunx --bun github:hraness/kb#v0.15.1 catalog --root kb",
     "build": "bun -e 'await (await import(\"node:fs/promises\")).rm(\"./dist\", { recursive: true, force: true })' && bun build ./src/index.ts ./src/react.ts ./src/testing/index.ts --outdir ./dist --root ./src --target browser --format esm --splitting --packages external",
     "check:portfolio-inventory": "bun ./scripts/check-portfolio-inventory.ts",
     "typecheck": "tsc --noEmit",
