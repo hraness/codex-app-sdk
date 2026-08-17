@@ -31,3 +31,4 @@
 - Treat this repository as the complete project. Use only its public names, files, paths, commands, and examples.
 - Keep `portfolio-inventory.json` byte-canonical and consistent with the public package identity, version, repository, and direct `@hraness/*` dependency edges.
 - Run `bun run check` before handing off a change.
+- This repository is retired after `v0.1.1`. Preserve the immutable tag and release; do not add features, publish another version, or restore active consumers. HRA owns its product-local application boundary.

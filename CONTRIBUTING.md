@@ -1,16 +1,3 @@
 # Contributing
 
-Issues and focused pull requests are welcome.
-
-Open an issue before starting a broad API, persistence, or compatibility change so the contract can be agreed first. Maintainers review changes for runtime portability, immutable-state behavior, generation fencing, explicit ambiguous outcomes, persistence safety, and readable tests.
-
-Install dependencies and run the complete local gate:
-
-```sh
-bun install
-bun run check
-```
-
-Every concrete behavior change needs a readable unit test. Add a property test when the change affects ordering, transitions, retries, conditional writes, generation monotonicity, cancellation, or selector identity.
-
-Keep the root entrypoint framework-neutral. React belongs in `@hraness/codex-app-sdk/react`, and deterministic adapters belong in `@hraness/codex-app-sdk/testing`.
+Codex App SDK is retired and no longer accepts issues, feature requests, or pull requests. The source and immutable [`v0.1.1` release](https://github.com/hraness/codex-app-sdk/releases/tag/v0.1.1) remain available under the MIT License for existing Git-pinned installs and historical reference.

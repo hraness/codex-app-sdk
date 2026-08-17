@@ -1,12 +1,15 @@
 # Codex App SDK
 
+> [!IMPORTANT]
+> This standalone package is retired. HRA now owns the application state, command, persistence, React, and testing boundary inside the HRA repository. The immutable [`v0.1.1` tag](https://github.com/hraness/codex-app-sdk/tree/v0.1.1) and [GitHub release](https://github.com/hraness/codex-app-sdk/releases/tag/v0.1.1) remain available for existing Git-pinned installs and historical reference. No maintenance, security updates, or compatibility work is planned here.
+
 Codex App SDK is an independent TypeScript toolkit for building interfaces over the official Codex app-server protocol. It supplies immutable state stores, typed application commands, explicit mutation outcomes, lifecycle fencing, narrow persistence ports, and an optional React selector hook.
 
 The public package identity is `@hraness/codex-app-sdk`. This project is not an official OpenAI SDK and is not affiliated with or endorsed by OpenAI. It does not claim npm registry publication.
 
-## Install from a tagged source release
+## Archived release
 
-Pin a reviewed repository tag when one is available:
+An existing project that must reproduce the final standalone release can pin its immutable tag:
 
 ```json
 {
