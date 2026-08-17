@@ -15,6 +15,7 @@
 - Use Bun 1.3.14 for repository commands and keep emitted ESM portable to modern browsers, Bun, and Node.js according to each export's documented boundary.
 - Follow `WRITING.md` for internal prose and `STYLE.md` for public prose.
 - Apply unreasonably robust programming when agent work is cheap. Model invalid states out of existence, parse every foreign value from `unknown`, and pair readable deterministic regressions with property tests for parsers, ordering, transitions, conditional writes, and round trips.
+- Deliver changes to `main` through a current-head pull request. Keep the stable `Required` CI job green, resolve every review thread, and serialize merges. Human approval stays optional while one regular maintainer would otherwise self-review. Never force-push or bypass the gate.
 - Pin Hraness dependencies to reviewed immutable releases or full commits. Never connect repositories through sibling paths, Git submodules, or coordinated `main` assumptions; upgrade each consumer independently.
 - Extract a shared package only after two concrete consumers require the same stable interface. Keep every shared package product-neutral and free of product imports.
 - Keep the React binding headless and styling-agnostic. Consumers may layer accessible primitives from `@hraness/ui`, stable optional composition from `@hraness/design-kit`, and product-owned layout and content without coupling those systems to this package.
