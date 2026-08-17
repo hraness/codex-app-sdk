@@ -1,7 +1,7 @@
 {
   "name": "@hraness/codex-app-sdk",
   "version": "0.1.1",
-  "description": "Headless state, command, persistence, and React contracts for Codex app-server interfaces.",
+  "description": "Archived Hraness Codex application-boundary package retained at v0.1.1 for existing Git-pinned installs.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
